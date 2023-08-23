@@ -1,0 +1,697 @@
+:root {
+  --bodyBgColor: #fff;
+  --headerTopBgColor: #fe3c47;
+  --headerBgColor: #fff;
+  --textColor: #1A1A1A;
+  --textWhiteColor: #fff;
+  --textHoverColor: #fe3c47;
+  --buttonTextColor: #fff;
+  --buttonBgColor: #fe3c47;
+  --borderColor: #fe3c47;
+  --borderHoverColor: #4E4E4E;
+  --buttonBgWhiteColor: #fff;
+  --buttonHoverBgColor: #4E4E4E;
+  --buttonHoverTextColor: #fff;
+  --iconColor: #1A1A1A;
+  --iconWhiteColor: #fff;
+  --iconHoverColor: #fe3c47;
+  --iconBgColor: #fe3c47;
+  --sectionBgColor: #edf0f2;
+  --transitionTime: .3s;
+  --trBgColor: background-color .3s;
+  --trColor: color .3s;
+  --modalBgColor: rgba(0,0,0,.1);
+  --transparent: transparent;
+  --iconHoverBgColor: #f23c47;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+a {
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+::-moz-selection {
+  background-color: #f23c47;
+  color: #fff;
+}
+
+::selection {
+  background-color: #f23c47;
+  color: #fff;
+}
+
+.main_wrapper header .header_top {
+  background-color: var(--headerTopBgColor);
+  padding: 6px 0;
+}
+.main_wrapper header .header_top .header_top_left p {
+  color: var(--textWhiteColor);
+  font-size: 17px;
+}
+.main_wrapper header .header_top .header_top_right .social_icons ul {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0 10px;
+}
+.main_wrapper header .header_top .header_top_right .social_icons ul li a {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: var(--bodyBgColor);
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trBgColor);
+  cursor: pointer;
+}
+.main_wrapper header .header_top .header_top_right .social_icons ul li a:hover {
+  background-color: var(--buttonHoverBgColor);
+}
+.main_wrapper header .header_top .header_top_right .social_icons ul li a:hover ion-icon {
+  color: var(--iconWhiteColor);
+}
+.main_wrapper header .header_top .header_top_right .social_icons ul li a ion-icon {
+  font-size: 17px;
+  color: var(--iconColor);
+  transition: color var(--transitionTime);
+}
+.main_wrapper header .header_middle {
+  padding: 25px 0;
+  background-color: var(--sectionBgColor);
+}
+.main_wrapper header .header_middle .header_logo a {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+.main_wrapper header .header_middle .header_logo a img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.main_wrapper header .header_middle .header_logo a span {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  transition: var(--trColor);
+}
+.main_wrapper header .header_middle .header_logo a:hover span {
+  color: var(--textHoverColor);
+}
+.main_wrapper header .header_middle .header_menu ul {
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0 15px;
+}
+.main_wrapper header .header_middle .header_menu ul li.hide {
+  display: none;
+}
+.main_wrapper header .header_middle .header_menu ul li a {
+  background-color: var(--buttonBgColor);
+  color: var(--textWhiteColor);
+  padding: 5px 15px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0 5px;
+  transition: var(--trBgColor);
+  cursor: pointer;
+}
+.main_wrapper header .header_middle .header_menu ul li a ion-icon {
+  font-size: 19px;
+}
+.main_wrapper header .header_middle .header_menu ul li a span {
+  font-size: 17px;
+  font-weight: 400;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main_wrapper header .header_middle .header_menu ul li a:hover {
+  background-color: var(--buttonHoverBgColor);
+}
+.main_wrapper .banner_section {
+  height: 600px;
+  background-image: url(./../image/banner\ bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.main_wrapper .banner_section .banner_content h2 {
+  color: var(--textWhiteColor);
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding-bottom: 20px;
+}
+.main_wrapper .banner_section .banner_content p {
+  color: var(--textWhiteColor);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+.main_wrapper .white_button {
+  padding-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+}
+.main_wrapper .white_button a {
+  font-size: 18px;
+  background-color: var(--buttonBgWhiteColor);
+  display: inline-block;
+  padding: 6px 15px;
+  color: var(--textColor);
+  border-radius: 3px;
+  transition: var(--trBgColor), var(--trColor), padding-right 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  position: relative;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.main_wrapper .white_button a.hide {
+  display: none;
+}
+.main_wrapper .white_button a ion-icon {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.5s;
+  transform: translateX(-20px);
+}
+.main_wrapper .white_button a:hover {
+  background-color: var(--buttonBgColor);
+  color: var(--textWhiteColor);
+  padding-right: 30px;
+}
+.main_wrapper .white_button a:hover ion-icon {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.main_wrapper .blood_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+}
+.main_wrapper .blood_button a {
+  font-size: 18px;
+  background-color: var(--buttonBgColor);
+  color: var(--buttonTextColor);
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 3px;
+  transition: var(--trBgColor), var(--trColor), padding-right 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  position: relative;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.main_wrapper .blood_button a ion-icon {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.5s;
+  transform: translateX(-20px);
+}
+.main_wrapper .blood_button a:hover {
+  background-color: var(--buttonHoverBgColor);
+  color: var(--textWhiteColor);
+  padding-right: 30px;
+}
+.main_wrapper .blood_button a:hover ion-icon {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.main_wrapper .title_content {
+  padding-bottom: 25px;
+}
+.main_wrapper .title_content h2 {
+  color: var(--textColor);
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+}
+.main_wrapper .title_content p {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  font-size: 17px;
+  color: var(--textColor);
+  font-weight: 400;
+}
+.main_wrapper .title_content .search_donner input:focus, .main_wrapper .title_content .search_donner select:focus {
+  border-color: var(--borderColor);
+  box-shadow: 0 0 0 0.25rem rgba(254, 60, 71, 0.25);
+}
+.main_wrapper .title_content .search_donner input[type=submit], .main_wrapper .title_content .search_donner input[type=button] {
+  background-color: var(--buttonBgColor);
+  border: none;
+  outline: none;
+  color: var(--buttonTextColor);
+  padding: 5.5px 15px;
+  border-radius: 3px;
+  transition: var(--trColor), var(--trBgColor);
+}
+.main_wrapper .title_content .search_donner input[type=submit]:hover, .main_wrapper .title_content .search_donner input[type=button]:hover {
+  background-color: var(--buttonHoverBgColor);
+  color: var(--buttonHoverTextColor);
+}
+.main_wrapper .title_content .search_donner input[type=button] {
+  background-color: var(--buttonHoverBgColor);
+}
+.main_wrapper .title_content .search_donner input[type=button]:hover {
+  background-color: var(--buttonBgColor);
+}
+.main_wrapper .banner_bottom_section {
+  background-color: var(--transparent);
+  padding: 40px 0;
+}
+.main_wrapper .banner_bottom_section .content_part h2 {
+  font-size: 28px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  color: var(--textColor);
+}
+.main_wrapper .banner_bottom_section .content_part p {
+  color: var(--textColor);
+  font-size: 17px;
+  font-weight: 400;
+  width: 70%;
+}
+.main_wrapper .member_section {
+  background-color: var(--sectionBgColor);
+  padding: 40px 0 10px 0;
+}
+.main_wrapper .member_section .member_box .member_image {
+  border-radius: 5px;
+  padding: 15px;
+  background-color: var(--bodyBgColor);
+  position: relative;
+  overflow: hidden;
+}
+.main_wrapper .member_section .member_box .member_image img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+  display: inline-block;
+}
+.main_wrapper .member_section .member_box .member_image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: calc(100% - 30px);
+  bottom: 15px;
+  margin: auto;
+  height: 0;
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 0, 51, 0.6));
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+}
+.main_wrapper .member_section .member_box .member_image .social_icons ul {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  gap: 0 8px;
+  align-items: center;
+  justify-content: center;
+}
+.main_wrapper .member_section .member_box .member_image .social_icons ul li {
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block;
+  transform: translateY(-30px);
+}
+.main_wrapper .member_section .member_box .member_image .social_icons ul li a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--iconBgColor);
+  padding: 5px;
+  transition: var(--trBgColor);
+}
+.main_wrapper .member_section .member_box .member_image .social_icons ul li a ion-icon {
+  color: var(--iconWhiteColor);
+}
+.main_wrapper .member_section .member_box .member_image .social_icons ul li a:hover {
+  background-color: var(--iconColor);
+  color: var(--iconWhiteColor);
+}
+.main_wrapper .member_section .member_box .member_info {
+  padding: 10px 0 10px 0;
+  background-color: var(--bodyBgColor);
+  width: calc(100% - 50px);
+  margin: auto;
+  transform: translateY(-50px);
+  position: relative;
+}
+.main_wrapper .member_section .member_box .member_info h4 {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 500;
+}
+.main_wrapper .member_section .member_box .member_info p {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+}
+.main_wrapper .member_section .member_box .member_info .details {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.3s;
+}
+.main_wrapper .member_section .member_box .member_info .details a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: var(--iconColor);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--trBgColor), var(--trColor);
+}
+.main_wrapper .member_section .member_box .member_info .details a:hover {
+  background-color: var(--iconHoverBgColor);
+  color: var(--iconWhiteColor);
+}
+.main_wrapper .member_section .member_box .member_info .details a ion-icon svg {
+  width: 20px;
+}
+.main_wrapper .member_section .member_box:hover .member_image::before {
+  height: calc(100% - 30px);
+  opacity: 1;
+  bottom: 15px;
+  visibility: visible;
+}
+.main_wrapper .member_section .member_box:hover .member_image .social_icons ul li {
+  transform: translateY(-80px);
+  opacity: 1;
+  visibility: visible;
+}
+.main_wrapper .member_section .member_box:hover .member_image .social_icons ul li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.main_wrapper .member_section .member_box:hover .member_image .social_icons ul li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.main_wrapper .member_section .member_box:hover .member_image .social_icons ul li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.main_wrapper .member_section .member_box:hover .member_image .social_icons ul li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.main_wrapper .member_section .member_box:hover .member_image .social_icons ul li:nth-child(5) {
+  transition-delay: 0.5s;
+}
+.main_wrapper .member_section .member_box:hover .member_info .details {
+  opacity: 1;
+  visibility: visible;
+}
+.main_wrapper .donner_data {
+  background-color: var(--sectionBgColor);
+  padding: 50px 0;
+}
+.main_wrapper .donner_data .donner_table_data table {
+  background-color: var(--bodyBgColor);
+}
+.main_wrapper .donner_data .donner_table_data table tbody td img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.main_wrapper .donner_data .donner_table_data table tbody td .email {
+  transition: var(--trColor);
+}
+.main_wrapper .donner_data .donner_table_data table tbody td .email:hover {
+  color: var(--textHoverColor);
+}
+.main_wrapper .donner_data .donner_table_data table tbody td.memberAction a {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+.main_wrapper .donner_data .donner_table_data table tbody td.memberAction a:last-child {
+  margin-right: 0;
+}
+.main_wrapper .donner_data .donner_table_data table tbody td.memberAction a ion-icon {
+  pointer-events: none;
+}
+.main_wrapper .global_banner {
+  background-color: var(--bodyBgColor);
+  padding: 40px 0;
+}
+.main_wrapper .global_banner .global_banner_content h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--textColor);
+  padding-bottom: 10px;
+}
+.main_wrapper .global_banner .global_banner_content .breadcrum a:nth-child(1) {
+  color: var(--textHoverColor);
+}
+.main_wrapper .global_banner .global_banner_content .breadcrum a {
+  font-size: 17px;
+  color: var(--textColor);
+  transition: var(--trColor);
+}
+.main_wrapper .global_banner .global_banner_content .breadcrum a:hover {
+  color: var(--textHoverColor);
+}
+.main_wrapper .footer_bottom_section {
+  background-color: var(--headerTopBgColor);
+  color: var(--textWhiteColor);
+  text-align: center;
+  padding: 10px 0;
+}
+
+.modal_wrapper #loginRegistraionModal, .modal_wrapper #addNewMemberModal, .modal_wrapper #memberEditModal, .modal_wrapper #addPatient {
+  background-color: var(--modalBgColor);
+}
+.modal_wrapper #loginRegistraionModal .modal-header h2, .modal_wrapper #addNewMemberModal .modal-header h2, .modal_wrapper #memberEditModal .modal-header h2, .modal_wrapper #addPatient .modal-header h2 {
+  font-size: 22px;
+  color: var(--textColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form, .modal_wrapper #loginRegistraionModal .member_login_form, .modal_wrapper #loginRegistraionModal .modal-body.add, .modal_wrapper #loginRegistraionModal .addNewPatient, .modal_wrapper #addNewMemberModal .member_registration_form, .modal_wrapper #addNewMemberModal .member_login_form, .modal_wrapper #addNewMemberModal .modal-body.add, .modal_wrapper #addNewMemberModal .addNewPatient, .modal_wrapper #memberEditModal .member_registration_form, .modal_wrapper #memberEditModal .member_login_form, .modal_wrapper #memberEditModal .modal-body.add, .modal_wrapper #memberEditModal .addNewPatient, .modal_wrapper #addPatient .member_registration_form, .modal_wrapper #addPatient .member_login_form, .modal_wrapper #addPatient .modal-body.add, .modal_wrapper #addPatient .addNewPatient {
+  display: none;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form.active, .modal_wrapper #loginRegistraionModal .member_login_form.active, .modal_wrapper #loginRegistraionModal .modal-body.add.active, .modal_wrapper #loginRegistraionModal .addNewPatient.active, .modal_wrapper #addNewMemberModal .member_registration_form.active, .modal_wrapper #addNewMemberModal .member_login_form.active, .modal_wrapper #addNewMemberModal .modal-body.add.active, .modal_wrapper #addNewMemberModal .addNewPatient.active, .modal_wrapper #memberEditModal .member_registration_form.active, .modal_wrapper #memberEditModal .member_login_form.active, .modal_wrapper #memberEditModal .modal-body.add.active, .modal_wrapper #memberEditModal .addNewPatient.active, .modal_wrapper #addPatient .member_registration_form.active, .modal_wrapper #addPatient .member_login_form.active, .modal_wrapper #addPatient .modal-body.add.active, .modal_wrapper #addPatient .addNewPatient.active {
+  display: block;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm, .modal_wrapper #loginRegistraionModal .member_login_form form, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm, .modal_wrapper #loginRegistraionModal .modal-body.add form, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm, .modal_wrapper #loginRegistraionModal .addNewPatient form, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm, .modal_wrapper #addNewMemberModal .member_registration_form form, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm, .modal_wrapper #addNewMemberModal .member_login_form form, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm, .modal_wrapper #addNewMemberModal .modal-body.add form, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm, .modal_wrapper #addNewMemberModal .addNewPatient form, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm, .modal_wrapper #memberEditModal .member_registration_form form, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm, .modal_wrapper #memberEditModal .member_login_form form, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm, .modal_wrapper #memberEditModal .modal-body.add form, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm, .modal_wrapper #memberEditModal .addNewPatient form, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm, .modal_wrapper #addPatient .member_registration_form form, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm, .modal_wrapper #addPatient .member_login_form form, .modal_wrapper #addPatient .member_login_form #addNewMemberForm, .modal_wrapper #addPatient .member_login_form #addNewPatientForm, .modal_wrapper #addPatient .modal-body.add form, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm, .modal_wrapper #addPatient .addNewPatient form, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 15px;
+  justify-content: space-between;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div, .modal_wrapper #loginRegistraionModal .member_login_form form div, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div, .modal_wrapper #loginRegistraionModal .modal-body.add form div, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div, .modal_wrapper #loginRegistraionModal .addNewPatient form div, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div, .modal_wrapper #addNewMemberModal .member_registration_form form div, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div, .modal_wrapper #addNewMemberModal .member_login_form form div, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div, .modal_wrapper #addNewMemberModal .modal-body.add form div, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div, .modal_wrapper #addNewMemberModal .addNewPatient form div, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div, .modal_wrapper #memberEditModal .member_registration_form form div, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div, .modal_wrapper #memberEditModal .member_login_form form div, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div, .modal_wrapper #memberEditModal .modal-body.add form div, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div, .modal_wrapper #memberEditModal .addNewPatient form div, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div, .modal_wrapper #addPatient .member_registration_form form div, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div, .modal_wrapper #addPatient .member_login_form form div, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div, .modal_wrapper #addPatient .modal-body.add form div, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div, .modal_wrapper #addPatient .addNewPatient form div, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div {
+  width: 100%;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div .pass_filed, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div .pass_filed, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div .pass_filed, .modal_wrapper #loginRegistraionModal .member_login_form form div .pass_filed, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div .pass_filed, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div .pass_filed, .modal_wrapper #loginRegistraionModal .modal-body.add form div .pass_filed, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div .pass_filed, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div .pass_filed, .modal_wrapper #loginRegistraionModal .addNewPatient form div .pass_filed, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div .pass_filed, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div .pass_filed, .modal_wrapper #addNewMemberModal .member_registration_form form div .pass_filed, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div .pass_filed, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div .pass_filed, .modal_wrapper #addNewMemberModal .member_login_form form div .pass_filed, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div .pass_filed, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div .pass_filed, .modal_wrapper #addNewMemberModal .modal-body.add form div .pass_filed, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div .pass_filed, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div .pass_filed, .modal_wrapper #addNewMemberModal .addNewPatient form div .pass_filed, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div .pass_filed, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div .pass_filed, .modal_wrapper #memberEditModal .member_registration_form form div .pass_filed, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div .pass_filed, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div .pass_filed, .modal_wrapper #memberEditModal .member_login_form form div .pass_filed, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div .pass_filed, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div .pass_filed, .modal_wrapper #memberEditModal .modal-body.add form div .pass_filed, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div .pass_filed, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div .pass_filed, .modal_wrapper #memberEditModal .addNewPatient form div .pass_filed, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div .pass_filed, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div .pass_filed, .modal_wrapper #addPatient .member_registration_form form div .pass_filed, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div .pass_filed, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div .pass_filed, .modal_wrapper #addPatient .member_login_form form div .pass_filed, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div .pass_filed, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div .pass_filed, .modal_wrapper #addPatient .modal-body.add form div .pass_filed, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div .pass_filed, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div .pass_filed, .modal_wrapper #addPatient .addNewPatient form div .pass_filed, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div .pass_filed, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div .pass_filed {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div .pass_filed span, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div .pass_filed span, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div .pass_filed span, .modal_wrapper #loginRegistraionModal .member_login_form form div .pass_filed span, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div .pass_filed span, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div .pass_filed span, .modal_wrapper #loginRegistraionModal .modal-body.add form div .pass_filed span, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div .pass_filed span, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div .pass_filed span, .modal_wrapper #loginRegistraionModal .addNewPatient form div .pass_filed span, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div .pass_filed span, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div .pass_filed span, .modal_wrapper #addNewMemberModal .member_registration_form form div .pass_filed span, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div .pass_filed span, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div .pass_filed span, .modal_wrapper #addNewMemberModal .member_login_form form div .pass_filed span, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div .pass_filed span, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div .pass_filed span, .modal_wrapper #addNewMemberModal .modal-body.add form div .pass_filed span, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div .pass_filed span, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div .pass_filed span, .modal_wrapper #addNewMemberModal .addNewPatient form div .pass_filed span, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div .pass_filed span, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div .pass_filed span, .modal_wrapper #memberEditModal .member_registration_form form div .pass_filed span, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div .pass_filed span, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div .pass_filed span, .modal_wrapper #memberEditModal .member_login_form form div .pass_filed span, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div .pass_filed span, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div .pass_filed span, .modal_wrapper #memberEditModal .modal-body.add form div .pass_filed span, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div .pass_filed span, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div .pass_filed span, .modal_wrapper #memberEditModal .addNewPatient form div .pass_filed span, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div .pass_filed span, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div .pass_filed span, .modal_wrapper #addPatient .member_registration_form form div .pass_filed span, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div .pass_filed span, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div .pass_filed span, .modal_wrapper #addPatient .member_login_form form div .pass_filed span, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div .pass_filed span, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div .pass_filed span, .modal_wrapper #addPatient .modal-body.add form div .pass_filed span, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div .pass_filed span, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div .pass_filed span, .modal_wrapper #addPatient .addNewPatient form div .pass_filed span, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div .pass_filed span, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div .pass_filed span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: var(--textColor);
+  cursor: pointer;
+  transition: var(--trBgColor), var(--trColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .member_login_form form div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .modal-body.add form div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .addNewPatient form div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .member_registration_form form div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .member_login_form form div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .modal-body.add form div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .addNewPatient form div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #memberEditModal .member_registration_form form div .pass_filed span:hover, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #memberEditModal .member_login_form form div .pass_filed span:hover, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #memberEditModal .modal-body.add form div .pass_filed span:hover, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #memberEditModal .addNewPatient form div .pass_filed span:hover, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #addPatient .member_registration_form form div .pass_filed span:hover, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #addPatient .member_login_form form div .pass_filed span:hover, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #addPatient .modal-body.add form div .pass_filed span:hover, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div .pass_filed span:hover, .modal_wrapper #addPatient .addNewPatient form div .pass_filed span:hover, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div .pass_filed span:hover, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div .pass_filed span:hover {
+  background-color: var(--iconHoverBgColor);
+  color: var(--textWhiteColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div label span, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div label span, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div label span, .modal_wrapper #loginRegistraionModal .member_login_form form div label span, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div label span, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div label span, .modal_wrapper #loginRegistraionModal .modal-body.add form div label span, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div label span, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div label span, .modal_wrapper #loginRegistraionModal .addNewPatient form div label span, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div label span, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div label span, .modal_wrapper #addNewMemberModal .member_registration_form form div label span, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div label span, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div label span, .modal_wrapper #addNewMemberModal .member_login_form form div label span, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div label span, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div label span, .modal_wrapper #addNewMemberModal .modal-body.add form div label span, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div label span, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div label span, .modal_wrapper #addNewMemberModal .addNewPatient form div label span, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div label span, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div label span, .modal_wrapper #memberEditModal .member_registration_form form div label span, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div label span, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div label span, .modal_wrapper #memberEditModal .member_login_form form div label span, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div label span, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div label span, .modal_wrapper #memberEditModal .modal-body.add form div label span, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div label span, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div label span, .modal_wrapper #memberEditModal .addNewPatient form div label span, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div label span, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div label span, .modal_wrapper #addPatient .member_registration_form form div label span, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div label span, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div label span, .modal_wrapper #addPatient .member_login_form form div label span, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div label span, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div label span, .modal_wrapper #addPatient .modal-body.add form div label span, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div label span, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div label span, .modal_wrapper #addPatient .addNewPatient form div label span, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div label span, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div label span {
+  color: var(--borderColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .member_login_form form div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .modal-body.add form div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .addNewPatient form div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .member_registration_form form div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .member_login_form form div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .modal-body.add form div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .addNewPatient form div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .member_registration_form form div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .member_login_form form div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .modal-body.add form div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .addNewPatient form div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #addPatient .member_registration_form form div select option:nth-child(1):hover, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #addPatient .member_login_form form div select option:nth-child(1):hover, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #addPatient .modal-body.add form div select option:nth-child(1):hover, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div select option:nth-child(1):hover, .modal_wrapper #addPatient .addNewPatient form div select option:nth-child(1):hover, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div select option:nth-child(1):hover, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div select option:nth-child(1):hover {
+  background: var(--buttonBgColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div input:focus, .modal_wrapper #loginRegistraionModal .member_registration_form form div select:focus, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div input:focus, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div select:focus, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div input:focus, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div select:focus, .modal_wrapper #loginRegistraionModal .member_login_form form div input:focus, .modal_wrapper #loginRegistraionModal .member_login_form form div select:focus, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div input:focus, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div select:focus, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div input:focus, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div select:focus, .modal_wrapper #loginRegistraionModal .modal-body.add form div input:focus, .modal_wrapper #loginRegistraionModal .modal-body.add form div select:focus, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div input:focus, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div select:focus, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div input:focus, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div select:focus, .modal_wrapper #loginRegistraionModal .addNewPatient form div input:focus, .modal_wrapper #loginRegistraionModal .addNewPatient form div select:focus, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div input:focus, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div select:focus, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div input:focus, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div select:focus, .modal_wrapper #addNewMemberModal .member_registration_form form div input:focus, .modal_wrapper #addNewMemberModal .member_registration_form form div select:focus, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div input:focus, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div select:focus, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div input:focus, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div select:focus, .modal_wrapper #addNewMemberModal .member_login_form form div input:focus, .modal_wrapper #addNewMemberModal .member_login_form form div select:focus, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div input:focus, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div select:focus, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div input:focus, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div select:focus, .modal_wrapper #addNewMemberModal .modal-body.add form div input:focus, .modal_wrapper #addNewMemberModal .modal-body.add form div select:focus, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div input:focus, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div select:focus, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div input:focus, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div select:focus, .modal_wrapper #addNewMemberModal .addNewPatient form div input:focus, .modal_wrapper #addNewMemberModal .addNewPatient form div select:focus, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div input:focus, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div select:focus, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div input:focus, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div select:focus, .modal_wrapper #memberEditModal .member_registration_form form div input:focus, .modal_wrapper #memberEditModal .member_registration_form form div select:focus, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div input:focus, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div select:focus, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div input:focus, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div select:focus, .modal_wrapper #memberEditModal .member_login_form form div input:focus, .modal_wrapper #memberEditModal .member_login_form form div select:focus, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div input:focus, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div select:focus, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div input:focus, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div select:focus, .modal_wrapper #memberEditModal .modal-body.add form div input:focus, .modal_wrapper #memberEditModal .modal-body.add form div select:focus, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div input:focus, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div select:focus, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div input:focus, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div select:focus, .modal_wrapper #memberEditModal .addNewPatient form div input:focus, .modal_wrapper #memberEditModal .addNewPatient form div select:focus, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div input:focus, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div select:focus, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div input:focus, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div select:focus, .modal_wrapper #addPatient .member_registration_form form div input:focus, .modal_wrapper #addPatient .member_registration_form form div select:focus, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div input:focus, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div select:focus, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div input:focus, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div select:focus, .modal_wrapper #addPatient .member_login_form form div input:focus, .modal_wrapper #addPatient .member_login_form form div select:focus, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div input:focus, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div select:focus, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div input:focus, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div select:focus, .modal_wrapper #addPatient .modal-body.add form div input:focus, .modal_wrapper #addPatient .modal-body.add form div select:focus, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div input:focus, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div select:focus, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div input:focus, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div select:focus, .modal_wrapper #addPatient .addNewPatient form div input:focus, .modal_wrapper #addPatient .addNewPatient form div select:focus, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div input:focus, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div select:focus, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div input:focus, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div select:focus {
+  box-shadow: none;
+  border-color: var(--borderColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div input[type=submit], .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div input[type=submit], .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div input[type=submit], .modal_wrapper #loginRegistraionModal .member_login_form form div input[type=submit], .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div input[type=submit], .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div input[type=submit], .modal_wrapper #loginRegistraionModal .modal-body.add form div input[type=submit], .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div input[type=submit], .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div input[type=submit], .modal_wrapper #loginRegistraionModal .addNewPatient form div input[type=submit], .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div input[type=submit], .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div input[type=submit], .modal_wrapper #addNewMemberModal .member_registration_form form div input[type=submit], .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div input[type=submit], .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div input[type=submit], .modal_wrapper #addNewMemberModal .member_login_form form div input[type=submit], .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div input[type=submit], .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div input[type=submit], .modal_wrapper #addNewMemberModal .modal-body.add form div input[type=submit], .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div input[type=submit], .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div input[type=submit], .modal_wrapper #addNewMemberModal .addNewPatient form div input[type=submit], .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div input[type=submit], .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div input[type=submit], .modal_wrapper #memberEditModal .member_registration_form form div input[type=submit], .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div input[type=submit], .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div input[type=submit], .modal_wrapper #memberEditModal .member_login_form form div input[type=submit], .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div input[type=submit], .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div input[type=submit], .modal_wrapper #memberEditModal .modal-body.add form div input[type=submit], .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div input[type=submit], .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div input[type=submit], .modal_wrapper #memberEditModal .addNewPatient form div input[type=submit], .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div input[type=submit], .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div input[type=submit], .modal_wrapper #addPatient .member_registration_form form div input[type=submit], .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div input[type=submit], .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div input[type=submit], .modal_wrapper #addPatient .member_login_form form div input[type=submit], .modal_wrapper #addPatient .member_login_form #addNewMemberForm div input[type=submit], .modal_wrapper #addPatient .member_login_form #addNewPatientForm div input[type=submit], .modal_wrapper #addPatient .modal-body.add form div input[type=submit], .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div input[type=submit], .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div input[type=submit], .modal_wrapper #addPatient .addNewPatient form div input[type=submit], .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div input[type=submit], .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div input[type=submit] {
+  background-color: var(--buttonBgColor);
+  border-color: var(--borderColor);
+  transition: var(--trBgColor), var(--trColor);
+  color: var(--textWhiteColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .member_login_form form div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .modal-body.add form div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .addNewPatient form div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .member_registration_form form div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .member_login_form form div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .modal-body.add form div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .addNewPatient form div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #memberEditModal .member_registration_form form div input[type=submit]:hover, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #memberEditModal .member_login_form form div input[type=submit]:hover, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #memberEditModal .modal-body.add form div input[type=submit]:hover, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #memberEditModal .addNewPatient form div input[type=submit]:hover, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #addPatient .member_registration_form form div input[type=submit]:hover, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #addPatient .member_login_form form div input[type=submit]:hover, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #addPatient .modal-body.add form div input[type=submit]:hover, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div input[type=submit]:hover, .modal_wrapper #addPatient .addNewPatient form div input[type=submit]:hover, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div input[type=submit]:hover, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div input[type=submit]:hover {
+  background-color: var(--buttonHoverBgColor);
+  color: var(--buttonHoverTextColor);
+  border-color: var(--borderHoverColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div.half, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div.half, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div.half, .modal_wrapper #loginRegistraionModal .member_login_form form div.half, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div.half, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div.half, .modal_wrapper #loginRegistraionModal .modal-body.add form div.half, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div.half, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div.half, .modal_wrapper #loginRegistraionModal .addNewPatient form div.half, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div.half, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div.half, .modal_wrapper #addNewMemberModal .member_registration_form form div.half, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div.half, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div.half, .modal_wrapper #addNewMemberModal .member_login_form form div.half, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div.half, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div.half, .modal_wrapper #addNewMemberModal .modal-body.add form div.half, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div.half, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div.half, .modal_wrapper #addNewMemberModal .addNewPatient form div.half, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div.half, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div.half, .modal_wrapper #memberEditModal .member_registration_form form div.half, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div.half, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div.half, .modal_wrapper #memberEditModal .member_login_form form div.half, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div.half, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div.half, .modal_wrapper #memberEditModal .modal-body.add form div.half, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div.half, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div.half, .modal_wrapper #memberEditModal .addNewPatient form div.half, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div.half, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div.half, .modal_wrapper #addPatient .member_registration_form form div.half, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div.half, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div.half, .modal_wrapper #addPatient .member_login_form form div.half, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div.half, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div.half, .modal_wrapper #addPatient .modal-body.add form div.half, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div.half, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div.half, .modal_wrapper #addPatient .addNewPatient form div.half, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div.half, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div.half {
+  width: calc(50% - 8px);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div.squer, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div.squer, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div.squer, .modal_wrapper #loginRegistraionModal .member_login_form form div.squer, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div.squer, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div.squer, .modal_wrapper #loginRegistraionModal .modal-body.add form div.squer, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div.squer, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div.squer, .modal_wrapper #loginRegistraionModal .addNewPatient form div.squer, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div.squer, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div.squer, .modal_wrapper #addNewMemberModal .member_registration_form form div.squer, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div.squer, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div.squer, .modal_wrapper #addNewMemberModal .member_login_form form div.squer, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div.squer, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div.squer, .modal_wrapper #addNewMemberModal .modal-body.add form div.squer, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div.squer, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div.squer, .modal_wrapper #addNewMemberModal .addNewPatient form div.squer, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div.squer, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div.squer, .modal_wrapper #memberEditModal .member_registration_form form div.squer, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div.squer, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div.squer, .modal_wrapper #memberEditModal .member_login_form form div.squer, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div.squer, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div.squer, .modal_wrapper #memberEditModal .modal-body.add form div.squer, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div.squer, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div.squer, .modal_wrapper #memberEditModal .addNewPatient form div.squer, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div.squer, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div.squer, .modal_wrapper #addPatient .member_registration_form form div.squer, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div.squer, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div.squer, .modal_wrapper #addPatient .member_login_form form div.squer, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div.squer, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div.squer, .modal_wrapper #addPatient .modal-body.add form div.squer, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div.squer, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div.squer, .modal_wrapper #addPatient .addNewPatient form div.squer, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div.squer, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div.squer {
+  width: calc(25% - 12px);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .member_registration_form form div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .member_login_form form div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .member_login_form form div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .modal-body.add form div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .modal-body.add form div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .addNewPatient form div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .addNewPatient form div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .member_registration_form form div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .member_registration_form form div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .member_login_form form div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .member_login_form form div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .modal-body.add form div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .modal-body.add form div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .addNewPatient form div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .addNewPatient form div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #memberEditModal .member_registration_form form div#imageFile .selectImage, .modal_wrapper #memberEditModal .member_registration_form form div#imageFile .previewImage, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #memberEditModal .member_login_form form div#imageFile .selectImage, .modal_wrapper #memberEditModal .member_login_form form div#imageFile .previewImage, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #memberEditModal .modal-body.add form div#imageFile .selectImage, .modal_wrapper #memberEditModal .modal-body.add form div#imageFile .previewImage, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #memberEditModal .addNewPatient form div#imageFile .selectImage, .modal_wrapper #memberEditModal .addNewPatient form div#imageFile .previewImage, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #addPatient .member_registration_form form div#imageFile .selectImage, .modal_wrapper #addPatient .member_registration_form form div#imageFile .previewImage, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #addPatient .member_login_form form div#imageFile .selectImage, .modal_wrapper #addPatient .member_login_form form div#imageFile .previewImage, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #addPatient .modal-body.add form div#imageFile .selectImage, .modal_wrapper #addPatient .modal-body.add form div#imageFile .previewImage, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div#imageFile .previewImage, .modal_wrapper #addPatient .addNewPatient form div#imageFile .selectImage, .modal_wrapper #addPatient .addNewPatient form div#imageFile .previewImage, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div#imageFile .selectImage, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div#imageFile .previewImage, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div#imageFile .selectImage, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div#imageFile .previewImage {
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+  border-radius: 8px;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .member_login_form form div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .modal-body.add form div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .addNewPatient form div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .member_registration_form form div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .member_login_form form div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .modal-body.add form div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .addNewPatient form div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .member_registration_form form div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .member_login_form form div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .modal-body.add form div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .addNewPatient form div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .member_registration_form form div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .member_login_form form div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .modal-body.add form div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .addNewPatient form div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .member_login_form form div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .modal-body.add form div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .addNewPatient form div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .member_registration_form form div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .member_login_form form div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .modal-body.add form div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .addNewPatient form div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .member_registration_form form div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .member_login_form form div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .modal-body.add form div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .addNewPatient form div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .member_registration_form form div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .member_login_form form div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .modal-body.add form div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .addNewPatient form div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images::before, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 0%;
+  transition: height 0.6s ease-in-out;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(242, 60, 71, 0.8));
+  cursor: pointer;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .member_login_form form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .modal-body.add form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .addNewPatient form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #loginRegistraionModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .member_registration_form form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .member_login_form form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .modal-body.add form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .addNewPatient form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addNewMemberModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .member_registration_form form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .member_login_form form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .modal-body.add form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .addNewPatient form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #memberEditModal .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .member_registration_form form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .member_registration_form #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .member_registration_form #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .member_login_form form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .member_login_form #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .member_login_form #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .modal-body.add form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .modal-body.add #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .modal-body.add #addNewPatientForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .addNewPatient form div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .addNewPatient #addNewMemberForm div#imageFile .previewImageParent .images:hover::before, .modal_wrapper #addPatient .addNewPatient #addNewPatientForm div#imageFile .previewImageParent .images:hover::before {
+  height: 100%;
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form .loginButton, .modal_wrapper #loginRegistraionModal .member_registration_form .registrationButton, .modal_wrapper #loginRegistraionModal .member_login_form .loginButton, .modal_wrapper #loginRegistraionModal .member_login_form .registrationButton, .modal_wrapper #loginRegistraionModal .modal-body.add .loginButton, .modal_wrapper #loginRegistraionModal .modal-body.add .registrationButton, .modal_wrapper #loginRegistraionModal .addNewPatient .loginButton, .modal_wrapper #loginRegistraionModal .addNewPatient .registrationButton, .modal_wrapper #addNewMemberModal .member_registration_form .loginButton, .modal_wrapper #addNewMemberModal .member_registration_form .registrationButton, .modal_wrapper #addNewMemberModal .member_login_form .loginButton, .modal_wrapper #addNewMemberModal .member_login_form .registrationButton, .modal_wrapper #addNewMemberModal .modal-body.add .loginButton, .modal_wrapper #addNewMemberModal .modal-body.add .registrationButton, .modal_wrapper #addNewMemberModal .addNewPatient .loginButton, .modal_wrapper #addNewMemberModal .addNewPatient .registrationButton, .modal_wrapper #memberEditModal .member_registration_form .loginButton, .modal_wrapper #memberEditModal .member_registration_form .registrationButton, .modal_wrapper #memberEditModal .member_login_form .loginButton, .modal_wrapper #memberEditModal .member_login_form .registrationButton, .modal_wrapper #memberEditModal .modal-body.add .loginButton, .modal_wrapper #memberEditModal .modal-body.add .registrationButton, .modal_wrapper #memberEditModal .addNewPatient .loginButton, .modal_wrapper #memberEditModal .addNewPatient .registrationButton, .modal_wrapper #addPatient .member_registration_form .loginButton, .modal_wrapper #addPatient .member_registration_form .registrationButton, .modal_wrapper #addPatient .member_login_form .loginButton, .modal_wrapper #addPatient .member_login_form .registrationButton, .modal_wrapper #addPatient .modal-body.add .loginButton, .modal_wrapper #addPatient .modal-body.add .registrationButton, .modal_wrapper #addPatient .addNewPatient .loginButton, .modal_wrapper #addPatient .addNewPatient .registrationButton {
+  border: none;
+  background-color: var(--transparent);
+  color: var(--textColor);
+  transition: var(--trColor);
+}
+.modal_wrapper #loginRegistraionModal .member_registration_form .loginButton:hover, .modal_wrapper #loginRegistraionModal .member_registration_form .registrationButton:hover, .modal_wrapper #loginRegistraionModal .member_login_form .loginButton:hover, .modal_wrapper #loginRegistraionModal .member_login_form .registrationButton:hover, .modal_wrapper #loginRegistraionModal .modal-body.add .loginButton:hover, .modal_wrapper #loginRegistraionModal .modal-body.add .registrationButton:hover, .modal_wrapper #loginRegistraionModal .addNewPatient .loginButton:hover, .modal_wrapper #loginRegistraionModal .addNewPatient .registrationButton:hover, .modal_wrapper #addNewMemberModal .member_registration_form .loginButton:hover, .modal_wrapper #addNewMemberModal .member_registration_form .registrationButton:hover, .modal_wrapper #addNewMemberModal .member_login_form .loginButton:hover, .modal_wrapper #addNewMemberModal .member_login_form .registrationButton:hover, .modal_wrapper #addNewMemberModal .modal-body.add .loginButton:hover, .modal_wrapper #addNewMemberModal .modal-body.add .registrationButton:hover, .modal_wrapper #addNewMemberModal .addNewPatient .loginButton:hover, .modal_wrapper #addNewMemberModal .addNewPatient .registrationButton:hover, .modal_wrapper #memberEditModal .member_registration_form .loginButton:hover, .modal_wrapper #memberEditModal .member_registration_form .registrationButton:hover, .modal_wrapper #memberEditModal .member_login_form .loginButton:hover, .modal_wrapper #memberEditModal .member_login_form .registrationButton:hover, .modal_wrapper #memberEditModal .modal-body.add .loginButton:hover, .modal_wrapper #memberEditModal .modal-body.add .registrationButton:hover, .modal_wrapper #memberEditModal .addNewPatient .loginButton:hover, .modal_wrapper #memberEditModal .addNewPatient .registrationButton:hover, .modal_wrapper #addPatient .member_registration_form .loginButton:hover, .modal_wrapper #addPatient .member_registration_form .registrationButton:hover, .modal_wrapper #addPatient .member_login_form .loginButton:hover, .modal_wrapper #addPatient .member_login_form .registrationButton:hover, .modal_wrapper #addPatient .modal-body.add .loginButton:hover, .modal_wrapper #addPatient .modal-body.add .registrationButton:hover, .modal_wrapper #addPatient .addNewPatient .loginButton:hover, .modal_wrapper #addPatient .addNewPatient .registrationButton:hover {
+  color: var(--textHoverColor);
+  text-decoration: underline;
+}
+.modal_wrapper #donnerSingleProfileModal .donner_profile_box {
+  display: flex;
+  gap: 0 20px;
+}
+.modal_wrapper #donnerSingleProfileModal .donner_profile_box .profile_image {
+  width: 40%;
+}
+.modal_wrapper #donnerSingleProfileModal .donner_profile_box .profile_image img {
+  border-radius: 3px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 15px;
+}
+.modal_wrapper #donnerSingleProfileModal .donner_profile_box .profile_info {
+  padding-top: 10px;
+}
+.modal_wrapper #donnerSingleProfileModal .donner_profile_box .profile_info h6 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--textColor);
+}
+.modal_wrapper #donnerSingleProfileModal .donner_profile_box .profile_info p {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--textColor);
+  white-space: nowrap;
+}
+.modal_wrapper #donnerSingleProfileModal .donner_profile_box .profile_info p a {
+  transition: var(--trColor);
+}
+.modal_wrapper #donnerSingleProfileModal .donner_profile_box .profile_info p a:hover {
+  color: var(--textHoverColor);
+}
+.modal_wrapper #donnerSingleProfileModal .donation_info tbody td a {
+  transition: var(--trColor);
+}
+.modal_wrapper #donnerSingleProfileModal .donation_info tbody td a:hover {
+  color: var(--textHoverColor);
+}/*# sourceMappingURL=style.css.map */

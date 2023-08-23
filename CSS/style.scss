@@ -1,0 +1,836 @@
+// Elements color
+:root{
+    --bodyBgColor : #fff;
+    --headerTopBgColor : #fe3c47;
+    --headerBgColor : #fff;
+    --textColor : #1A1A1A;
+    --textWhiteColor : #fff;
+    --textHoverColor : #fe3c47;
+    --buttonTextColor : #fff;
+    --buttonBgColor : #fe3c47;
+    --borderColor : #fe3c47;
+    --borderHoverColor : #4E4E4E;
+    --buttonBgWhiteColor : #fff;
+    --buttonHoverBgColor : #4E4E4E;
+    --buttonHoverTextColor : #fff;
+    --iconColor : #1A1A1A;
+    --iconWhiteColor : #fff;
+    --iconHoverColor : #fe3c47;
+    --iconBgColor : #fe3c47;
+    --sectionBgColor : #edf0f2;
+    --transitionTime : .3s;
+    --trBgColor : background-color .3s;
+    --trColor : color .3s;
+    --modalBgColor : rgba(0,0,0,.1);
+    --transparent : transparent;
+    --iconHoverBgColor : #f23c47;
+}
+// Reseting code...
+*{
+    font-family: 'Nunito', sans-serif;
+}
+a{
+    color: var(--textColor);
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+::selection{
+    background-color: #f23c47;
+    color: #fff;
+}
+
+// Start design part from here...
+
+.main_wrapper{
+    header{     
+        .header_top{
+            background-color: var(--headerTopBgColor);
+            padding: 6px 0;
+            .header_top_left{
+                p{
+                    color: var(--textWhiteColor);
+                    font-size: 17px;
+                }
+            }
+            .header_top_right{
+                .social_icons{
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        justify-content: end;
+                        gap: 0 10px;
+    
+                        li{
+                            a{
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 2px;
+                                background-color: var(--bodyBgColor);
+                                display: inline-block;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transition: var(--trBgColor);
+                                cursor: pointer;
+    
+                                &:hover{
+                                    background-color: var(--buttonHoverBgColor);
+    
+                                    ion-icon{
+                                        color: var(--iconWhiteColor);
+                                    }
+                                }
+    
+                                ion-icon{
+                                    font-size: 17px;
+                                    color: var(--iconColor);
+                                    transition: color var(--transitionTime);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .header_middle{
+            padding: 25px 0;
+            background-color: var(--sectionBgColor);
+
+            .header_logo{
+                a{
+                    display: flex;
+                    align-items: center;
+                    gap: 0 8px;
+                    img{
+                        width: 35px;
+                        height: 35px;
+                        object-fit: cover;
+                        border-radius: 5px;
+                    }
+                    span{
+                        display: inline-block;
+                        font-size: 20px;
+                        font-weight: 600;
+                        transition: var(--trColor);
+                    }
+    
+                    &:hover{
+                        span{
+                            color: var(--textHoverColor);
+                        }
+                    }
+                }
+            }
+            .header_menu{
+                ul{
+                    display: flex;
+                    white-space: nowrap;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 0 15px;
+    
+                    li{
+                        &.hide{
+                            display: none;
+                        }
+                        a{
+                            background-color: var(--buttonBgColor);
+                            color: var(--textWhiteColor);
+                            padding: 5px 15px;
+                            border-radius: 3px;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 0 5px;
+                            transition: var(--trBgColor);
+                            cursor: pointer;
+    
+    
+                            ion-icon{
+                                font-size: 19px;
+                            }
+                            span{
+                                font-size: 17px;
+                                font-weight: 400;
+                                user-select: none;
+                            }
+    
+                            &:hover{
+                                background-color: var(--buttonHoverBgColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .banner_section{
+        height: 600px;
+        background-image: url(./../image/banner\ bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        .banner_content{
+            h2{
+                color: var(--textWhiteColor);
+                font-size: 35px;
+                font-weight: 600;
+                letter-spacing: .3px;
+                padding-bottom: 20px;
+            }
+            p{
+                color: var(--textWhiteColor);
+                font-size: 18px;
+                font-weight: 400;
+                letter-spacing: .3px;
+            }
+        }
+    }
+    .white_button{
+        padding-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 10px;
+
+        a{
+            &.hide{
+                display: none;
+            }
+
+            font-size: 18px;
+            background-color: var(--buttonBgWhiteColor);
+            display: inline-block;
+            padding: 6px 15px;
+            color: var(--textColor);
+            border-radius: 3px;
+            transition: var(--trBgColor), var(--trColor), padding-right .3s;
+            display: flex;
+            align-items: center;
+            gap: 0 5px;
+            position: relative;
+            cursor: pointer;
+            text-transform: capitalize;
+
+            ion-icon{
+                position: absolute;
+                right: 8px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .3s, visibility .3s, transform .5s;
+                transform: translateX(-20px);
+
+            }
+
+            &:hover{
+                background-color: var(--buttonBgColor);
+                color: var(--textWhiteColor);
+                padding-right: 30px;
+
+                ion-icon{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+    .blood_button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 10px;
+
+        a{
+            font-size: 18px;
+            background-color: var(--buttonBgColor);
+            color: var(--buttonTextColor);
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 3px;
+            transition: var(--trBgColor), var(--trColor), padding-right .3s;
+            display: flex;
+            align-items: center;
+            gap: 0 5px;
+            position: relative;
+            cursor: pointer;
+            text-transform: capitalize;
+
+            ion-icon{
+                position: absolute;
+                right: 8px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity .3s, visibility .3s, transform .5s;
+                transform: translateX(-20px);
+
+            }
+
+            &:hover{
+                background-color: var(--buttonHoverBgColor);
+                color: var(--textWhiteColor);
+                padding-right: 30px;
+
+                ion-icon{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+    .title_content{
+        padding-bottom: 25px;
+        h2{
+            color: var(--textColor);
+            font-size: 28px;
+            font-weight: 500;
+            text-transform: capitalize;
+            padding-bottom: 10px;
+        }
+        p{
+            text-align: center;
+            width: 70%;
+            margin: auto;
+            font-size: 17px;
+            color: var(--textColor);
+            font-weight: 400;
+        }
+        .search_donner{
+            input, select{
+                &:focus{
+                    border-color: var(--borderColor);
+                    box-shadow: 0 0 0 0.25rem rgba(254, 60, 71, .25);
+                }
+            }
+            input[type="submit"], input[type="button"]{
+                background-color: var(--buttonBgColor);
+                border: none;
+                outline: none;
+                color: var(--buttonTextColor);
+                padding: 5.5px 15px;
+                border-radius: 3px;
+                transition: var(--trColor), var(--trBgColor);
+
+                &:hover{
+                    background-color: var(--buttonHoverBgColor);
+                    color: var(--buttonHoverTextColor);
+                }
+            }
+            input[type="button"]{
+                background-color: var(--buttonHoverBgColor);
+
+                &:hover{
+                    background-color: var(--buttonBgColor);
+                }
+            }
+        }
+    }
+    .banner_bottom_section{
+        background-color: var(--transparent);
+        padding: 40px 0;
+        .content_part{
+            h2{
+                font-size: 28px;
+                font-weight: 500;
+                padding-bottom: 10px;
+                color: var(--textColor);
+            }
+            p{
+                color: var(--textColor);
+                font-size: 17px;
+                font-weight: 400;
+                width: 70%;
+            }
+        }
+    }
+    .member_section{
+        background-color: var(--sectionBgColor);
+        padding: 40px 0 10px 0;
+        .member_box{
+            .member_image{
+                border-radius: 5px;
+                padding: 15px;
+                background-color: var(--bodyBgColor);
+                position: relative;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                    border-radius: 3px;
+                    display: inline-block;
+                }
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    // top: 0;
+                    width: calc(100% - 30px);
+                    bottom: 15px;
+                    margin: auto;
+                    height: 0;
+                    background-image: linear-gradient(to bottom, transparent 50%, rgba(255, 0, 51, .6));
+                    border-radius: 3px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .8s;
+                }
+
+                .social_icons{
+
+                    ul{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        display: flex;
+                        gap: 0 8px;
+                        align-items: center;
+                        justify-content: center;
+                        
+                        li{
+                            transition: all .5s ease-in-out;
+                            opacity: 0;
+                            visibility: hidden;
+                            display: inline-block;
+                            transform: translateY(-30px);
+                            
+                            a{
+                                width: 30px;
+                                height: 30px;
+                                display: flex;align-items: center;justify-content: center;
+                                border-radius: 50%;
+                                background-color: var(--iconBgColor);
+                                padding: 5px;
+                                transition: var(--trBgColor);
+
+                                ion-icon{
+                                    color: var(--iconWhiteColor);
+                                }
+
+                                &:hover{
+                                    background-color: var(--iconColor);
+                                    color: var(--iconWhiteColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .member_info{
+                padding: 10px 0 10px 0;
+                background-color: var(--bodyBgColor);
+                width: calc(100% - 50px);
+                margin: auto;
+                transform: translateY(-50px);
+                position: relative;
+
+
+                h4{
+                    font-size: 22px;
+                    text-align: center;
+                    font-weight: 500;
+                }
+                p{
+                    text-align: center;
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+                .details{
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .3s ease-in-out;
+                    transition-delay: .3s;
+
+                    a{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: #ddd;
+                        color: var(--iconColor);
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: var(--trBgColor), var(--trColor);
+
+                        &:hover{
+                            background-color: var(--iconHoverBgColor);
+                            color: var(--iconWhiteColor);
+                        }
+
+                        ion-icon{
+                            svg{
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover{
+                .member_image{
+                    &::before{
+                        height: calc(100% - 30px);
+                        opacity: 1;
+                        bottom: 15px;
+                        visibility: visible;
+                    }
+                    .social_icons{
+                        ul{
+    
+                            li{
+                                transform: translateY(-80px);
+                                opacity: 1;
+                                visibility: visible;
+                            }
+    
+                            li:nth-child(1){
+                                transition-delay: .1s;
+                            }
+                            li:nth-child(2){
+                                transition-delay: .2s;
+                            }
+                            li:nth-child(3){
+                                transition-delay: .3s;
+                            }
+                            li:nth-child(4){
+                                transition-delay: .4s;
+                            }
+                            li:nth-child(5){
+                                transition-delay: .5s;
+                            }
+                        }
+                    }
+                }
+                .member_info{
+                    .details{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    // Account page...
+    .donner_data{
+        background-color: var(--sectionBgColor);
+        padding: 50px 0;
+        .donner_table_data{
+            table{
+                background-color: var(--bodyBgColor);
+                tbody{
+                    td{
+                        img{
+                            width: 50px;
+                            height: 50px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            border: 3px solid #fff;
+                        }
+
+                        & .email{
+                            transition: var(--trColor);
+                            &:hover{
+                                color: var(--textHoverColor);
+                            }
+                        }
+
+                        &.memberAction{
+                            a{
+                                display: inline-flex;
+                                width: 30px;
+                                height: 30px;
+                                padding: 0;
+                                justify-content: center;
+                                align-items: center;
+                                margin-right: 5px;
+    
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+
+                                ion-icon{
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+
+    // Global banner css...
+    .global_banner{
+        background-color: var(--bodyBgColor);
+        padding: 40px 0;
+        .global_banner_content{
+            h2{
+                font-size: 28px;
+                font-weight: 500;
+                color: var(--textColor);
+                padding-bottom: 10px;
+            }
+            .breadcrum{
+                a:nth-child(1){
+                    color: var(--textHoverColor);
+                }
+                a{
+                    font-size: 17px;
+                    color: var(--textColor);
+                    transition: var(--trColor);
+
+                    &:hover{
+                        color: var(--textHoverColor);
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .footer_bottom_section{
+        background-color: var(--headerTopBgColor);
+        color: var(--textWhiteColor);
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+// Modal wrapper css
+.modal_wrapper{
+    #loginRegistraionModal, #addNewMemberModal, #memberEditModal, #addPatient{
+        background-color: var(--modalBgColor);
+        .modal-header{
+            h2{
+                font-size: 22px;
+                color: var(--textColor);
+            }
+        }
+        .member_registration_form, .member_login_form, .modal-body.add, .addNewPatient{
+            display: none;
+            
+            &.active{
+                display: block;
+            }
+            form, #addNewMemberForm, #addNewPatientForm{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0 15px;
+                justify-content: space-between;
+
+                div{
+                    width: 100%;
+
+                    .pass_filed{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+
+                        span{
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 20px;
+                            margin: auto;
+                            display: flex;align-items: center;justify-content: center;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            color: var(--textColor);
+                            cursor: pointer;
+                            transition: var(--trBgColor), var(--trColor);
+
+                            &:hover{
+                                background-color: var(--iconHoverBgColor);
+                                color: var(--textWhiteColor);
+                            }
+                        }
+                    }
+
+                    label{
+                        span{
+                            color: var(--borderColor);
+                        }
+                    }
+
+                    select{
+                        option:nth-child(1){
+                            &:hover{
+                                background: var(--buttonBgColor);
+                            }
+                        }
+                    }
+
+                    input:focus, select:focus{
+                        box-shadow: none;
+                        border-color: var(--borderColor);
+                    }
+
+                    input[type="submit"]{
+                        background-color: var(--buttonBgColor);
+                        border-color: var(--borderColor);
+                        transition: var(--trBgColor), var(--trColor);
+                        color: var(--textWhiteColor);
+
+                        &:hover{
+                            background-color: var(--buttonHoverBgColor);
+                            color: var(--buttonHoverTextColor);
+                            border-color: var(--borderHoverColor);
+                        }
+                    }
+                    &.half{
+                        width: calc(50% - 8px);
+                    }
+
+                    &.squer{
+                        width: calc(25% - 12px);
+                    }
+
+                    &#imageFile{
+                        .selectImage, .previewImage{
+                            width: 150px;
+                            height: 150px;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center left;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            object-fit: cover;
+                        }
+                        .previewImageParent{
+                            & .images{
+                                position: relative;
+                                width: 150px;
+                                height: 150px;
+                                border-radius: 8px;
+                                object-fit: cover;
+                                display: none;
+
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                    width: 100%;
+                                    height: 0%;
+                                    transition: height .6s ease-in-out;
+                                    border-radius: 8px;
+                                    background-image: linear-gradient(to bottom, transparent 50%,rgba(242, 60, 71,.8));
+                                    cursor: pointer;
+                                }
+
+                                &:hover{
+                                    &::before{
+                                        height: 100%;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        
+                    }
+                }
+                
+            }
+            .loginButton, .registrationButton{
+                border: none;
+                background-color: var(--transparent);
+                color: var(--textColor);
+                transition: var(--trColor);
+
+                &:hover{
+                    color: var(--textHoverColor);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    #donnerSingleProfileModal{
+        .donner_profile_box{
+            display: flex;
+            gap: 0 20px;
+
+            .profile_image{
+                width: 40%;
+
+                img{
+                    border-radius: 3px;
+                    object-fit: cover;
+                    margin-top: 15px;
+                }
+            }
+            .profile_info{
+                padding-top: 10px;
+                h6{
+                    font-size: 22px;
+                    font-weight: 600;
+                    color: var(--textColor);
+                }
+                p{
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: var(--textColor);
+                    white-space: nowrap;
+
+                    a{
+                        transition: var(--trColor);
+
+                        &:hover{
+                            color: var(--textHoverColor);
+                        }
+                    }
+                }
+            }
+        }
+        .donation_info{
+            tbody{
+                td{
+                    a{
+                        transition: var(--trColor);
+                        &:hover{
+                            color: var(--textHoverColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
