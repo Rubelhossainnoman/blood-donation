@@ -244,6 +244,12 @@ class MemberAssets{
 
         if (allDonateMembers) {
             allDonateMembers.innerHTML = content;
+
+
+            console.log(["2"] + 2);
+
+
+
         }else{
             latestMembers.innerHTML = members;
         }       
